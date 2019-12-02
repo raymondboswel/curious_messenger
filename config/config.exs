@@ -20,6 +20,11 @@ config :lv_demo, LvDemoWeb.Endpoint,
     signing_salt: "Owi5GjCTYr2ktNDvN69COpT1Lr1zMEa/"
   ]
 
+config :lv_demo, :pow,
+  user: LvDemo.Auth.User,
+  repo: LvDemo.Repo,
+  web_module: LvDemoWeb
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

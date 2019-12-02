@@ -44,5 +44,9 @@ defmodule LvDemoWeb.Endpoint do
     key: "_lv_demo_key",
     signing_salt: "MMOmm8zS"
 
+  plug Pow.Plug.Session,
+    otp_app: :lv_demo,
+    cache_store_backend: Pow.Store.Backend.MnesiaCache
+
   plug LvDemoWeb.Router
 end

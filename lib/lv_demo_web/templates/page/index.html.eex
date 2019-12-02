@@ -3,6 +3,12 @@
   <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
 </section>
 
+<%= if @current_user do %>
+  <%= live_render(@conn,
+                  LvDemoWeb.DashboardLive,
+                  session: %{current_user: @current_user}) %>
+<% end %>
+
 <section class="row">
   <article class="column">
     <h2>Resources</h2>

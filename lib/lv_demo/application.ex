@@ -11,9 +11,10 @@ defmodule LvDemo.Application do
       # Start the Ecto repository
       LvDemo.Repo,
       # Start the endpoint when the application starts
-      LvDemoWeb.Endpoint
+      LvDemoWeb.Endpoint,
       # Starts a worker by calling: LvDemo.Worker.start_link(arg)
       # {LvDemo.Worker, arg},
+      Pow.Store.Backend.MnesiaCache
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

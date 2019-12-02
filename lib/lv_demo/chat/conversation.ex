@@ -6,7 +6,8 @@ defmodule LvDemo.Chat.Conversation do
   schema "chat_conversations" do
     field :title, :string
 
-    has_many :conversation_members, ConversationMember
+    has_many :conversation_members, ConversationMember, on_replace: :delete
+    has_many :users, through: [:conversation_members, :user]
     has_many :messages, Message
 
     timestamps()
@@ -16,6 +17,7 @@ defmodule LvDemo.Chat.Conversation do
   def changeset(conversation, attrs) do
     conversation
     |> cast(attrs, [:title])
+    |> cast_assoc(:conversation_members)
     |> validate_required([:title])
   end
 end
