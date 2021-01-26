@@ -68,8 +68,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :lv_demo, LvDemo.Repo,
-  username: "raymond",
-  password: "password",
+  username: "testuser",
+  password: "letmein",
   database: "lv_demo_dev",
   hostname: "localhost",
   pool_size: 10

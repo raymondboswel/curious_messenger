@@ -8,10 +8,11 @@
       <%= f = form_for :message, "#", [phx_submit: "send_message"] %>
         <%= label f, :content %>
         <%= text_input f, :content %>
-        <%= submit "Send" %>
+
+        <ion-button type="submit">Send</ion-button>
       </form>
     </div>
-    <div>
+    <div phx-hook="Messages">
       <b>Messages:</b>
       <%= for message <- @messages do %>
         <div>

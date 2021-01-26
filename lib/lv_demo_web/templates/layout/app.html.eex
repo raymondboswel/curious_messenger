@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>LvDemo · Phoenix Framework</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    	<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   </head>
   <body>
+  <ion-app id="ion-app" style="justify-content: flex-start">
+  <ion-content>
     <header>
       <section class="container">
         <nav role="navigation">
@@ -32,5 +38,7 @@
       <%= render @view_module, @view_template, assigns %>
     </main>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    </ion-content>
+    </ion-app>
   </body>
 </html>
