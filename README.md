@@ -1,7 +1,12 @@
 # LvDemo
 
-To start your Phoenix server:
+Prerequisites
+ * elixir (https://elixir-lang.org/install.html)
+ * postgres 
+ * node
 
+To start your Phoenix server:
+  * clone repo and cd into repo directory.
   * Install dependencies with `mix deps.get`
   * Update the values under config :lv_demo, LvDemo.Repo in dev.exs to reflect the connection parameters required to connect to your local postgres server
   * Create and migrate your database with `mix ecto.setup`
@@ -9,8 +14,6 @@ To start your Phoenix server:
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
 
