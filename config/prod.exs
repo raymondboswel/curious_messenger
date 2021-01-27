@@ -69,7 +69,7 @@ config :logger, level: :info
 
 # Configure your database
 config :lv_demo, LvDemo.Repo,
-  username: "${DB_USERNAME}"
+  username: "${DB_USERNAME}",
   password: "${DB_PASSWORD}",
   database: "${DB_DATABASE}",
   hostname: "${HOSTNAME}",
